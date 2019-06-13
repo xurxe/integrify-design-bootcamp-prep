@@ -1,0 +1,22 @@
+1. Went to https://github.com/gatsbyjs/gatsby-starter-default and followed instructions:
+    > gatsby new integrify-design-bootcamp-prep https://github.com/gatsbyjs/gatsby-starter-default
+    > cd integrify-design-bootcamp-prep
+
+2. Deleted files:
+    - src/components/[all files]
+    - src/images/[all files]
+    - src/pages/page-2.js
+    - gatsby-browser.js
+    - gatsby-node.js
+    - gatsby-ssr.js
+    - prettierrc
+
+3. Edited files:
+    - src/pages/404.js
+    - src/pages/index.js
+    - gatsby-config.js
+    - LICENSE
+    - README.md
+
+4. Added files: 
+    - log.txt
