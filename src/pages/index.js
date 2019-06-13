@@ -1,7 +1,9 @@
 import React from "react"
 
+import App from "../components/App";
+
 const IndexPage = () => (
-    <h1>Hi people</h1>
+    <App></App>
 )
 
 export default IndexPage

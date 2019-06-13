@@ -1,0 +1,11 @@
+:root {
+    --blue: #2B2570;
+    --cyan: #1DFFC2;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}

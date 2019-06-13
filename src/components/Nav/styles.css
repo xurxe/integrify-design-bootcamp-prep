@@ -1,0 +1,110 @@
+.Nav {
+    background-color: white;
+    border-bottom: 10px solid var(--cyan);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.Nav_div {
+    display: flex;
+}
+
+.Nav_logo {
+    background-color: var(--blue);
+    border: none;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    outline: none;
+}
+
+.Nav_link {
+    color: var(--blue);
+    font-size: 20px;
+    outline: none;
+    margin: 10px;
+    text-decoration: none;
+}
+
+.Nav_link___login {
+    font-size: 16px;
+    margin: 0;
+}
+
+
+
+/* Adapted from hover.caa */
+.hvr-outline-out {
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+    transition-property: border-radius;
+    transition-timing-function: linear;
+}
+
+.hvr-outline-out:hover,
+.hvr-outline-out:focus,
+.hvr-outline-out:active {
+    border-radius: 0;
+}
+
+.hvr-outline-out:before {
+    content: '';
+    border: var(--blue) solid 3px;
+    border-radius: 4px;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity, top, right, bottom, left;
+    transition-timing-function: linear;
+}
+
+.hvr-outline-out:hover:before, 
+.hvr-outline-out:focus:before, 
+.hvr-outline-out:active:before {
+    opacity: 1;
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+}
+
+
+
+
+.hvr-underline-out {
+    display: inline-block;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+}
+
+.hvr-underline-out:before {
+    content: '';
+    border-bottom: var(--blue) solid 2px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity, bottom;
+    transition-timing-function: ease-in-out;
+}
+
+.hvr-underline-out:hover:before, 
+.hvr-underline-out:focus:before, 
+.hvr-underline-out:active:before {
+    opacity: 1;
+    bottom: -4px;
+}

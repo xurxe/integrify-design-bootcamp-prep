@@ -15,6 +15,12 @@ module.exports = {
         },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        `gatsby-plugin-manifest`
+        `gatsby-plugin-manifest`,
+        {
+            resolve: `gatsby-plugin-postcss`,
+            options: {
+                postCssPlugins: [require(`autoprefixer`)],
+            },
+        },
     ],
 }
