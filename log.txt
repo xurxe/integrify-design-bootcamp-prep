@@ -20,3 +20,15 @@
 
 4. Added files: 
     - log.txt
+
+5. Created GitHub repository with same name and connected:
+    > git remote add origin https://github.com/xurxe/integrify-design-bootcamp-prep.git
+    > git push -u origin master
+
+6. Set up develop branch:
+    > git branch develop
+    > git checkout develop
+    > git push --set-upstream origin develop
+
+7. Protected master branch on GitHub:
+    - repository => settings => Require pull request reviews before merging
