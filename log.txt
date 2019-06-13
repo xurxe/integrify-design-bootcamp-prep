@@ -3,8 +3,10 @@
     > cd integrify-design-bootcamp-prep
 
 2. Deleted files:
+    - public/icons
+    - public/manifest.webmanifest
     - src/components/[all files]
-    - src/images/[all files]
+    - src/images/gatsby-astronaut.png
     - src/pages/page-2.js
     - gatsby-browser.js
     - gatsby-node.js
