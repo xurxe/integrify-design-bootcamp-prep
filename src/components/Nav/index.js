@@ -1,7 +1,7 @@
-import React from "react";
-import "./styles.css";
+import React from 'react';
+import './styles.css';
 
-import { Link } from "gatsby";
+import { Link } from 'gatsby';
 
 const Nav = () => (
     <nav className='Nav'>
