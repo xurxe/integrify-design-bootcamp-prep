@@ -1,0 +1,23 @@
+.Header {
+    background-color: var(--blue);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    height: 100vh;
+    width: 100vw;
+    padding: 100px;
+}
+
+.Header_div___text {
+    align-self: center;
+    padding-left: 50px;
+}
+
+.Header_title {
+    color: var(--cyan);
+    font-size: 40px;
+}
+
+.Header_subtitle {
+    color: white;
+    font-size: 30px;
+}

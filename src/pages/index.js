@@ -3,7 +3,9 @@ import React from "react"
 import App from "../components/App";
 
 const IndexPage = () => (
-    <App></App>
+    <App
+    pageName='index'
+    ></App>
 )
 
 export default IndexPage

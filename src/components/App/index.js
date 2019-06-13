@@ -1,14 +1,27 @@
 import React from 'react';
 import './styles.css';
 
+import Data from '../../data';
 import Nav from '../Nav';
-import Hero from '../Hero';
+import Header from '../Header';
 
-const App = () => (
-    <div className='App'>
-        <Nav></Nav>
-        <Hero></Hero>
-    </div>
-)
+const App = ({ pageName }) => {
+
+    const page = Data.pages.filter(object => object.name == pageName)[0];
+
+    const jsx = (
+        <div className='App'>
+
+            <Nav></Nav>
+
+            <Header 
+            header={page.header}
+            ></Header>
+
+        </div>
+    )
+
+    return jsx;
+}
 
 export default App;
