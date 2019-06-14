@@ -1,0 +1,24 @@
+.titlesAndThreeColumns {
+    margin: 50px 50px 100px;
+}
+
+.titlesAndThreeColumns_title {
+    font-size: 40px;
+    font-weight: normal;
+    margin: 0 50px 40px;
+    text-align: center;
+}
+
+.titlesAndThreeColumns_subtitle {
+    font-size: 20px;
+    font-weight: normal;
+    margin: 0 100px 30px;
+    text-align: center;
+}
+
+.titlesAndThreeColumns_columns {
+    display: grid;
+    grid-column-gap: 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}

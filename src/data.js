@@ -86,8 +86,7 @@ const Data = {
             path: '/',
             header: {
                 id: '005',
-                title: 'Think Tank United',
-                subtitle: 'is a curated community of leaders and influencers that positively impact the world',
+                title: '<strong>Think Tank United</strong> is a curated community of leaders and influencers that positively impact the world',
                 button: {
                     text: 'Join TTU now!',
                     to: '/join',
@@ -97,7 +96,7 @@ const Data = {
             main: [
                 {
                     id: '006',
-                    type: 'textInThreeColumns',
+                    type: 'titlesAndThreeColumns',
                     title: 'Who are we?',
                     subtitle: 'TTU is a weird collection of entrepreneurs, technologists, artists, professors and other misfits with a <strong>unique world view</strong>.',
                     column1: 'So what connects our tribe? <strong>Synergy</strong>. The belief that bringing together creative minds from widely varying disciplines largely increases the potential of those involved.',
@@ -106,7 +105,7 @@ const Data = {
                 },
                 {
                     id: '007',
-                    type: 'textInThreeColumns',
+                    type: 'titlesAndThreeColumns',
                     title: 'What do we do?',
                     subtitle: 'TTU is a weird collection of entrepreneurs, technologists, artists, professors and other misfits with a <strong>unique world view</strong>.',
                     column1: 'So what connects our tribe? <strong>Synergy</strong>. The belief that bringing together creative minds from widely varying disciplines largely increases the potential of those involved.',
@@ -115,7 +114,7 @@ const Data = {
                 },
                 {
                     id: '008',
-                    type: 'textInThreeColumns',
+                    type: 'titlesAndThreeColumns',
                     title: 'Why do we do it?',
                     subtitle: 'TTU is a weird collection of entrepreneurs, technologists, artists, professors and other misfits with a <strong>unique world view</strong>.',
                     column1: 'So what connects our tribe? <strong>Synergy</strong>. The belief that bringing together creative minds from widely varying disciplines largely increases the potential of those involved.',

@@ -40,7 +40,7 @@ const Footer = () => {
                 >
                     <h3
                     className='Footer_mapTitle'>
-                        <strong className='Footer_strong'>Think Tank United</strong> is currently connecting <em className='Footer_em'>287</em> minds from <em className='Footer_em'>19</em> different countries.
+                        <strong>Think Tank United</strong> is currently connecting <em>287</em> minds from <em>19</em> different countries.
                     </h3>
 
                 </div>

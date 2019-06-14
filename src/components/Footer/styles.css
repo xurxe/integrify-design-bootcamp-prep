@@ -53,12 +53,12 @@
     font-weight: normal; 
 }
 
-.Footer_strong {
+.Footer_mapTitle strong {
     color: var(--cyan);
     font-size: 20px;
 }
 
-.Footer_em {
+.Footer_mapTitle em {
     font-style: normal;
     font-size: 20px;
 }
