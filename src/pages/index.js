@@ -4,7 +4,7 @@ import App from "../components/App";
 
 const IndexPage = () => (
     <App
-    pageName='index'
+    pageName='Home'
     ></App>
 )
 

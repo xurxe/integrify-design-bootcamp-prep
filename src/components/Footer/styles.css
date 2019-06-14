@@ -1,0 +1,70 @@
+.Footer {
+    width: 100%;
+}
+
+.Footer_box {
+    text-align: center;
+}
+
+.Footer_box___top {
+    background-color: var(--blue);
+    border-top: 10px solid var(--cyan);
+    color: white;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 40px 0;
+}
+
+.Footer_subBox {
+    padding: 0 40px;
+}
+
+.Footer_subBox___socialMedia {
+    border-right: 1px solid var(--cyan);
+}
+
+.Footer_socialMediaTitle {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.Footer_socialMediaIcon {
+    color: var(--cyan);
+    font-size: 40px;
+    margin: 10px;
+    transition-duration: 0.3s;
+    transition-property: color;
+    transition-timing-function: linear;
+}
+
+.Footer_socialMediaIcon:hover,
+.Footer_socialMediaIcon:focus {
+    color: white;
+    outline: none;
+}
+
+.Footer_mapTitle {
+    font-size: 15px;
+    font-weight: normal; 
+}
+
+.Footer_strong {
+    color: var(--cyan);
+    font-size: 20px;
+}
+
+.Footer_em {
+    font-style: normal;
+    font-size: 20px;
+}
+
+.Footer_box___bottom {
+    background-color: var(--cyan);
+    color: var(--blue);
+    padding: 15px;
+}

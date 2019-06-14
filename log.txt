@@ -45,3 +45,6 @@
     - gatsby-plugin-postcss
 
 12. Updated gatsby-config.js
+
+13. Added package:
+    - html-react-parser

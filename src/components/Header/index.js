@@ -1,6 +1,8 @@
 import React from 'react';
 import './styles.css';
 
+import Image from 'gatsby-image';
+
 const Header = ({ header }) => {
 
     const {title, subtitle, image} = header;
@@ -11,7 +13,7 @@ const Header = ({ header }) => {
         >
 
             <div
-            className='Header_div Header_div___text'
+            className='Header_box Header_box___text'
             >
                 {title && 
                 <h1
@@ -31,8 +33,14 @@ const Header = ({ header }) => {
             </div>
 
             <div
-            className='Header_div Header_div___image'
-            ></div>
+            className='Header_box Header_box___image'
+            >
+                {image && 
+                <Image
+                fluid={image.fluid}
+                ></Image>}
+
+            </div>
         </div>
 
     )

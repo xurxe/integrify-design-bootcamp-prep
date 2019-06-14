@@ -3,11 +3,11 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     height: 100vh;
-    width: 100vw;
+    width: 100%;
     padding: 100px;
 }
 
-.Header_div___text {
+.Header_box___text {
     align-self: center;
     padding-left: 50px;
 }
@@ -20,4 +20,9 @@
 .Header_subtitle {
     color: white;
     font-size: 30px;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
 }
