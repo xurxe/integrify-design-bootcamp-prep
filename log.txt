@@ -48,3 +48,21 @@
 
 13. Added package:
     - html-react-parser
+
+14. Set up Contentful
+
+15. Created .env file
+
+16. Added packages:
+    - gatsby-source-contentful
+
+17. Added to gatsby-config.js
+    > require("dotenv").config()
+    > plugins:
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: process.env.spaceId,
+                accessToken: process.env.accessToken,
+            },
+        },

@@ -12,6 +12,8 @@ const App = ({ pageName }) => {
 
     const page = Data.pages.filter(object => object.name === pageName)[0];
 
+    const { header, main } = page;
+
     const jsx = (
         <div className='App'>
 
@@ -20,12 +22,13 @@ const App = ({ pageName }) => {
             <Nav></Nav>
 
             <Header 
-            header={page.header}
+            header={header}
             ></Header>
 
+            {main &&
             <Main
-            main={page.main}
-            ></Main>
+            main={main}
+            ></Main>}
 
             <Footer></Footer>
 

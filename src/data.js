@@ -190,29 +190,67 @@ const Data = {
                     title: 'Selected TTU members',
                     members: [
                         {
+                            id: '028',
+                            image: 'portrait1.jpg',
                             name: 'Miep Modaal',
                             position: 'Board Member',
-                            company: 'Unilever'
+                            company: 'Unilever',
                         },
                         {
+                            id: '029',
+                            image: 'portrait2.jpg',
                             name: 'Jan Publiek',
                             position: 'CEO',
                             company: 'ING Group'
                         },
                         {
+                            id: '030',
+                            image: 'portrait3.jpg',
                             name: 'Janina Kowalska',
                             position: 'CEO',
                             company: 'Eleks'
                         },
                         {
+                            id: '031',
+                            image: 'portrait1.jpg',
                             name: 'Maija Meikäläinen',
                             position: 'Spokesperson',
                             company: 'Rovio'
                         },
                         {
+                            id: '032',
+                            image: 'portrait2.jpg',
                             name: 'Totti Teikäläinen',
                             position: 'CFO',
                             company: 'Nokia'
+                        },
+                        {
+                            id: '033',
+                            image: 'portrait3.jpg',
+                            name: 'Janina Kowalska',
+                            position: 'CEO',
+                            company: 'Eleks'
+                        },
+                        {
+                            id: '031',
+                            image: 'portrait1.jpg',
+                            name: 'Maija Meikäläinen',
+                            position: 'Spokesperson',
+                            company: 'Rovio'
+                        },
+                        {
+                            id: '032',
+                            image: 'portrait2.jpg',
+                            name: 'Totti Teikäläinen',
+                            position: 'CFO',
+                            company: 'Nokia'
+                        },
+                        {
+                            id: '033',
+                            image: 'portrait3.jpg',
+                            name: 'Janina Kowalska',
+                            position: 'CEO',
+                            company: 'Eleks'
                         },
                     ]
                 },

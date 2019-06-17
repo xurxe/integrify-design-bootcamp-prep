@@ -4,6 +4,7 @@
 
 .Section_content___members {
     display: flex;
+    overflow-x: hidden;
 }
 
 .Member {
@@ -28,4 +29,9 @@
 .Member_text {
     padding: 10px;
     text-align: center;
+}
+
+.Member_name {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
