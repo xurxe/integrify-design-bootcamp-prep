@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 
 import TitlesAndThreeColumns from '../sections/TitlesAndThreeColumns';
+import Events from '../sections/Events';
 
 const Section = ({ section }) => {
     let jsx;
@@ -11,6 +12,14 @@ const Section = ({ section }) => {
             <TitlesAndThreeColumns
             section={section}
             ></TitlesAndThreeColumns>
+        )
+    }
+
+    else if (section.type === 'events') {
+        jsx = (
+            <Events
+            section={section}
+            ></Events>
         )
     }
 

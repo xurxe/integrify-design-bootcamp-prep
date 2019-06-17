@@ -6,28 +6,28 @@ const Data = {
             {
                 id: '004',
                 name: 'Home',
-                path: '/'
+                slug: ''
             },
             {
                 id: '005',
                 name: 'About',
-                path: '/about'
+                slug: 'about'
             },
             {
                 id: '006',
                 name: 'Events',
-                path: '/events'
+                slug: 'events'
             },
             {
                 id: '007',
                 name: 'Join us!',
-                path: '/join'
+                slug: 'join'
             },
         ],
         right:{
             id: '008',
             name: 'Log in',
-            path: '/login'
+            slug: 'login'
         },
     },
 
@@ -41,31 +41,31 @@ const Data = {
                     id: '016',
                     name: 'Facebook',
                     href: 'https://www.facebook.com/',
-                    icon: '<i class="fab fa-facebook-square"></i>'
+                    icon: '<i aria-hidden="true" class="fab fa-facebook-square"></i>'
                 },
                 {
                     id: '017',
                     name: 'Instagram',
                     href: 'https://www.instagram.com/',
-                    icon: '<i class="fab fa-instagram"></i>'
+                    icon: '<i aria-hidden="true" class="fab fa-instagram"></i>'
                 },
                 {
                     id: '018',
                     name: 'LinkedIn',
                     href: 'https://www.instagram.com/',
-                    icon: '<i class="fab fa-linkedin"></i>'
+                    icon: '<i aria-hidden="true" class="fab fa-linkedin"></i>'
                 },
                 {
                     id: '019',
                     name: 'Medium',
                     href: 'https://www.medium.com/',
-                    icon: '<i class="fab fa-medium"></i>'
+                    icon: '<i aria-hidden="true" class="fab fa-medium"></i>'
                 },
                 {
                     id: '020',
                     name: 'Twitter',
                     href: 'https://www.twitter.com/',
-                    icon: '<i class="fab fa-twitter-square"></i>'
+                    icon: '<i aria-hidden="true" class="fab fa-twitter-square"></i>'
                 }
             ],
         },
@@ -83,13 +83,13 @@ const Data = {
         {
             id: '004',
             name: 'Home',
-            path: '/',
+            slug: '',
             header: {
                 id: '005',
                 title: '<strong>Think Tank United</strong> is a curated community of leaders and influencers that positively impact the world',
-                button: {
+                pill: {
                     text: 'Join TTU now!',
-                    to: '/join',
+                    path: '/join',
                 },
                 image: null,
             },
@@ -101,7 +101,7 @@ const Data = {
                     subtitle: 'TTU is a weird collection of entrepreneurs, technologists, artists, professors and other misfits with a <strong>unique world view</strong>.',
                     column1: 'So what connects our tribe? <strong>Synergy</strong>. The belief that bringing together creative minds from widely varying disciplines largely increases the potential of those involved.',
                     column2: 'The world around us is changing rapidly and some challenges we can only tackle when we’re united. TTU facilitates events where wide-ranging bright minds connect personally to <strong>share thoughts, insights, and ideas</strong>.',
-                    column3: 'TTU is built around the concept of ‘<strong>Controlled Chaos</strong>’. We curate and connect high-quality members in our TTU format (control) and observe the surprising and often innovative solutions they come up with (chaos).',
+                    column3: 'TTU is built around the concept of <strong>‘Controlled Chaos’</strong>. We curate and connect high-quality members in our TTU format (control) and observe the surprising and often innovative solutions they come up with (chaos).',
                 },
                 {
                     id: '007',
@@ -121,33 +121,101 @@ const Data = {
                     column2: 'The world around us is changing rapidly and some challenges we can only tackle when we’re united. TTU facilitates events where wide-ranging bright minds connect personally to <strong>share thoughts, insights, and ideas</strong>.',
                     column3: 'TTU is built around the concept of ‘<strong>Controlled Chaos</strong>’. We curate and connect high-quality members in our TTU format (control) and observe the surprising and often innovative solutions they come up with (chaos).',
                 },
+                {
+                    id: '021',
+                    type: 'events',
+                    title: 'Events',
+                    subtitle: 'Search for upcoming events by location, name, or TTU members:',
+                    events: [
+                        {
+                            id: '023',
+                            dateTime: '2019-06-26T18:00:00+02:00',
+                            venue: 'The Thinking Hut',
+                            city: 'Amsterdam',
+                            country: 'The Netherlands',
+                            pill: {
+                                text: 'Join!',
+                                path: '/events/ams-jun-2019',
+                            },
+                        },
+                        {
+                            id: '024',
+                            dateTime: '2019-07-17T18:00:00+03:00',
+                            venue: 'Integrify',
+                            city: 'Helsinki',
+                            country: 'Finland',
+                            pill: {
+                                text: 'Join!',
+                                path: '/events/hki-jul-2019',
+                            },
+                        },
+                        {
+                            id: '025',
+                            dateTime: '2019-08-26T18:00:00+02:00',
+                            venue: 'The Thinking Hut',
+                            city: 'Amsterdam',
+                            country: 'The Netherlands',
+                            pill: {
+                                text: 'Join!',
+                                path: '/events/ams-aug-2019',
+                            },
+                        },
+                        {
+                            id: '026',
+                            dateTime: '2019-09-17T18:00:00+03:00',
+                            venue: 'Integrify',
+                            city: 'Helsinki',
+                            country: 'Finland',
+                            pill: {
+                                text: 'Join!',
+                                path: '/events/hki-sep-2019',
+                            },
+                        },
+                        {
+                            id: '027',
+                            dateTime: '2019-10-26T18:00:00+02:00',
+                            venue: 'The Thinking Hut',
+                            city: 'Amsterdam',
+                            country: 'The Netherlands',
+                            pill: {
+                                text: 'Join!',
+                                path: '/events/ams-oct-2019',
+                            },
+                        },
+                    ]
+                },
+                {
+                    id: '022',
+                    type: 'members',
+                    title: 'Selected TTU members',
+                },
             ]
         },
         {
             id: '009',
             name: 'About',
-            path: '/about',
+            slug: 'about',
             header: {},
             main: {},
         },
         {
             id: '010',
             name: 'Events',
-            path: '/events',
+            slug: 'events',
             header: {},
             main: {},
         },
         {
             id: '011',
             name: 'Join us!',
-            path: '/join',
+            slug: 'join',
             header: {},
             main: {},
         },
         {
             id: '012',
             name: 'Log in',
-            path: '/login',
+            slug: 'login',
             header: {},
             main: {},
         },

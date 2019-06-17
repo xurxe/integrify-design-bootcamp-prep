@@ -26,7 +26,6 @@
 .Nav_link {
     color: var(--blue);
     font-size: 20px;
-    outline: none;
     margin: 10px;
     text-decoration: none;
 }
@@ -40,9 +39,10 @@
 
 /* Adapted from hover.css */
 
-.hvr-outline-out {
+.hvr-outline-out___nav {
     border-radius: 4px;
     display: inline-block;
+    outline: none;
     position: relative;
     transform: perspective(1px) translateZ(0);
     transition-duration: 0.3s;
@@ -50,13 +50,13 @@
     transition-timing-function: linear;
 }
 
-.hvr-outline-out:hover,
-.hvr-outline-out:focus,
-.hvr-outline-out:active {
+.hvr-outline-out___nav:hover,
+.hvr-outline-out___nav:focus,
+.hvr-outline-out___nav:active {
     border-radius: 0;
 }
 
-.hvr-outline-out:before {
+.hvr-outline-out___nav:before {
     content: '';
     border: var(--blue) solid 3px;
     border-radius: 4px;
@@ -71,9 +71,9 @@
     transition-timing-function: linear;
 }
 
-.hvr-outline-out:hover:before, 
-.hvr-outline-out:focus:before, 
-.hvr-outline-out:active:before {
+.hvr-outline-out___nav:hover:before, 
+.hvr-outline-out___nav:focus:before, 
+.hvr-outline-out___nav:active:before {
     opacity: 1;
     top: -6px;
     right: -6px;
@@ -83,13 +83,14 @@
 
 
 
-.hvr-underline-out {
+.hvr-underline-out___nav {
     display: inline-block;
+    outline: none;
     position: relative;
     transform: perspective(1px) translateZ(0);
 }
 
-.hvr-underline-out:before {
+.hvr-underline-out___nav:before {
     content: '';
     border-bottom: var(--blue) solid 2px;
     opacity: 0;
@@ -102,9 +103,9 @@
     transition-timing-function: ease-in-out;
 }
 
-.hvr-underline-out:hover:before, 
-.hvr-underline-out:focus:before, 
-.hvr-underline-out:active:before {
+.hvr-underline-out___nav:hover:before, 
+.hvr-underline-out___nav:focus:before, 
+.hvr-underline-out___nav:active:before {
     opacity: 1;
     bottom: -4px;
 }

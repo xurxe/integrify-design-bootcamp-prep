@@ -27,7 +27,7 @@ const Footer = () => {
                     {Data.footer.socialMedia.links.map(item => (
                         <a 
                         key={item.id}
-                        className='Footer_socialMediaIcon'
+                        className='Footer_socialMediaIcon hvr-underline-out___footer'
                         href={item.href}
                         aria-label={item.name}>
                             {Parser(item.icon)}

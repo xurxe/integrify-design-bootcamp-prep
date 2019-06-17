@@ -3,10 +3,11 @@ import './styles.css';
 
 import Image from 'gatsby-image';
 import Parser from 'html-react-parser';
+import Pill from '../Pill';
 
 const Header = ({ header }) => {
 
-    const {title, image} = header;
+    const {title, image, pill} = header;
 
     const jsx = (
         <div
@@ -23,6 +24,11 @@ const Header = ({ header }) => {
                     {Parser(title)}
                 </h1>
                 }
+
+                {pill && 
+                <Pill
+                pill={pill}
+                ></Pill>}
             </div>
 
             <div

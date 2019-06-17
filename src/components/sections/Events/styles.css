@@ -1,0 +1,31 @@
+.Event {
+    border-bottom: 5px solid var(--cyan);
+    display: flex;
+    justify-content: space-between; 
+    margin-bottom: 20px;
+}
+
+.Event_info {
+    display: flex;
+}
+
+.Event_number {
+    background-color: var(--blue);
+    border-radius: 4px 4px 0 0;
+    color: white;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+    font-size: 25px;
+    height: 40px;
+    line-height: 40px;
+    margin-right: 15px;
+    text-align: center;
+    width: 40px;
+}
+
+.Event_date {
+    font-size: 16px;
+}

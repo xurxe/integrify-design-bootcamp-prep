@@ -9,21 +9,21 @@ const TitlesAndThreeColumns = ({ section }) => {
     
     const jsx = (
         <section
-        className='titlesAndThreeColumns'>
+        className='Section Section___titlesAndThreeColumns'>
             <h2
-            className='titlesAndThreeColumns_title'
+            className='Section_title'
             >
                 {title}
             </h2>
 
-            <h3
-            className='titlesAndThreeColumns_subtitle'
+            {subtitle && <h3
+            className='Section_subtitle'
             >
                 {Parser(subtitle)}
-            </h3>
+            </h3>}
 
             <div
-            className='titlesAndThreeColumns_columns'
+            className='Section_content Section_content___titlesAndThreeColumns'
             >
                 <p>{Parser(column1)}</p>
                 <p>{Parser(column2)}</p>

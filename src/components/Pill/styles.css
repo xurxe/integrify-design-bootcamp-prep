@@ -1,0 +1,11 @@
+.Pill {
+    background-color: var(--cyan);
+    color: var(--blue);
+    display: inline-block;
+    font-size: 16px;
+    height: 30px;
+    line-height: 30px;
+    border-radius: 15px;
+    padding: 0 15px;
+    text-decoration: none;
+}
