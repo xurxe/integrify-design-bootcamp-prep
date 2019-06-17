@@ -1,0 +1,31 @@
+.Section___members {
+    margin: 50px 0 100px;
+}
+
+.Section_content___members {
+    display: flex;
+}
+
+.Member {
+    background: var(--blue);
+    border-left: 5px solid var(--cyan);
+    color: white;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+    flex-shrink: 0;
+    margin-left: 10px;
+    width: 250px;
+}
+
+.Member_photo {
+    height: 300px;
+    width: 100%;
+}
+
+.Member_text {
+    padding: 10px;
+    text-align: center;
+}

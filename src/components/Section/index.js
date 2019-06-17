@@ -3,6 +3,7 @@ import './styles.css';
 
 import TitlesAndThreeColumns from '../sections/TitlesAndThreeColumns';
 import Events from '../sections/Events';
+import Members from '../sections/Members';
 
 const Section = ({ section }) => {
     let jsx;
@@ -20,6 +21,14 @@ const Section = ({ section }) => {
             <Events
             section={section}
             ></Events>
+        )
+    }
+
+    else if (section.type === 'members') {
+        jsx = (
+            <Members
+            section={section}
+            ></Members>
         )
     }
 

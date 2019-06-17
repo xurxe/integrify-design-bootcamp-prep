@@ -4,6 +4,39 @@ import './styles.css';
 import Parser from 'html-react-parser';
 import Pill from '../../Pill';
 
+const Events = ({ section }) => {
+    
+    const { title, subtitle, events} = section;
+    
+    const jsx = (
+        <section
+        className='Section Section___events'>
+            <h2
+            className='Section_title'
+            >
+                {title}
+            </h2>
+
+            {subtitle && <h3
+            className='Section_subtitle'
+            >
+                {Parser(subtitle)}
+            </h3>}
+
+            {events && events.map((event, index) => (
+                <Event 
+                key={event.id}
+                number={index + 1}
+                event={event}
+                ></Event>
+            ))}
+
+        </section>
+    )
+
+    return jsx;
+}
+
 const Event = ({ number, event }) => {
 
     const { dateTime, venue, city, pill} = event;
@@ -47,39 +80,6 @@ const Event = ({ number, event }) => {
             ></Pill>
 
         </div>
-    )
-
-    return jsx;
-}
-
-const Events = ({ section }) => {
-    
-    const { title, subtitle, events} = section;
-    
-    const jsx = (
-        <section
-        className='Section Section___events'>
-            <h2
-            className='Section_title'
-            >
-                {title}
-            </h2>
-
-            {subtitle && <h3
-            className='Section_subtitle'
-            >
-                {Parser(subtitle)}
-            </h3>}
-
-            {events && events.map((event, index) => (
-                <Event 
-                key={event.id}
-                number={index + 1}
-                event={event}
-                ></Event>
-            ))}
-
-        </section>
     )
 
     return jsx;

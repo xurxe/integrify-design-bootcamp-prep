@@ -188,6 +188,33 @@ const Data = {
                     id: '022',
                     type: 'members',
                     title: 'Selected TTU members',
+                    members: [
+                        {
+                            name: 'Miep Modaal',
+                            position: 'Board Member',
+                            company: 'Unilever'
+                        },
+                        {
+                            name: 'Jan Publiek',
+                            position: 'CEO',
+                            company: 'ING Group'
+                        },
+                        {
+                            name: 'Janina Kowalska',
+                            position: 'CEO',
+                            company: 'Eleks'
+                        },
+                        {
+                            name: 'Maija Meikäläinen',
+                            position: 'Spokesperson',
+                            company: 'Rovio'
+                        },
+                        {
+                            name: 'Totti Teikäläinen',
+                            position: 'CFO',
+                            company: 'Nokia'
+                        },
+                    ]
                 },
             ]
         },

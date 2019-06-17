@@ -1,8 +1,13 @@
+
+.Section___events {
+    margin: 50px 50px 100px;
+}
+
 .Event {
     border-bottom: 5px solid var(--cyan);
     display: flex;
     justify-content: space-between; 
-    margin-bottom: 20px;
+    margin: 0 100px 20px;
 }
 
 .Event_info {
