@@ -2,12 +2,11 @@ import React from 'react';
 import './styles.css';
 
 import Image from 'gatsby-image';
-import Parser from 'html-react-parser';
 import Pill from '../Pill';
 
 const Header = ({ header }) => {
 
-    const {title, image, pill} = header;
+    const {title, subtitle, pill, image} = header;
 
     const jsx = (
         <div
@@ -21,8 +20,16 @@ const Header = ({ header }) => {
                 <h1
                 className='Header_title'
                 >
-                    {Parser(title)}
+                    {title}
                 </h1>
+                }
+
+                {subtitle && 
+                <h2
+                className='Header_subtitle'
+                >
+                    {subtitle}
+                </h2>
                 }
 
                 {pill && 

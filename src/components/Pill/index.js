@@ -5,10 +5,10 @@ import { Link } from 'gatsby';
 
 const Pill = ({ pill }) => {
 
-    const { text, path } = pill;
+    const { text, to } = pill;
     
     const jsx = (
-        <Link to={path}
+        <Link to={to.slug}
         className='Pill'
         >
             {text}

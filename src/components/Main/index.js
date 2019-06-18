@@ -9,6 +9,7 @@ const Main = ({ main }) => {
         <main>
             {main.map(section => (
                 <Section 
+                key={section.id}
                 section={section}
                 ></Section>
             ))}

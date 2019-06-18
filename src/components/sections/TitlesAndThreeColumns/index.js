@@ -19,15 +19,15 @@ const TitlesAndThreeColumns = ({ section }) => {
             {subtitle && <h3
             className='Section_subtitle'
             >
-                {Parser(subtitle)}
+                {Parser(subtitle.childMarkdownRemark.html)}
             </h3>}
 
             <div
             className='Section_content Section_content___titlesAndThreeColumns'
             >
-                <p>{Parser(column1)}</p>
-                <p>{Parser(column2)}</p>
-                <p>{Parser(column3)}</p>
+                <map>{Parser(column1.childMarkdownRemark.html)}</map>
+                <map>{Parser(column2.childMarkdownRemark.html)}</map>
+                <map>{Parser(column3.childMarkdownRemark.html)}</map>
             </div>
         </section>
     )

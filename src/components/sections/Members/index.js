@@ -19,7 +19,7 @@ const Members = ({ section }) => {
             {subtitle && <h3
             className='Section_subtitle'
             >
-                {Parser(subtitle)}
+                {Parser(subtitle.childMarkdownRemark.html)}
             </h3>}
 
             <div
@@ -27,6 +27,7 @@ const Members = ({ section }) => {
             >
                 {members && members.map(member => (
                     <Member
+                    key={member.id}
                     member={member}
                     ></Member>
                 ))}

@@ -13,6 +13,12 @@
 }
 
 .Header_title {
+    color: var(--cyan);
+    display: block;
+    font-size: 40px;
+}
+
+.Header_subtitle {
     color: white;
     font-size: 30px;
     text-rendering: optimizeLegibility;
@@ -20,10 +26,4 @@
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -o-font-smoothing: antialiased;
-}
-
-.Header_title strong {
-    color: var(--cyan);
-    display: block;
-    font-size: 40px;
 }

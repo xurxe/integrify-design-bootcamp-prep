@@ -1,33 +1,35 @@
 import React from 'react';
 import './styles.css';
 
+import { StaticQuery, graphql } from 'gatsby';
 import Parser from 'html-react-parser';
 import Pill from '../../Pill';
 
-const Events = ({ section }) => {
+const Events = ({ data, section }) => {
     
-    const { title, subtitle, events} = section;
+    const { title, subtitle } = section;
+    const { allContentfulEvent } = data;
     
     const jsx = (
         <section
         className='Section Section___events'>
-            <h2
+            <h3
             className='Section_title'
             >
                 {title}
-            </h2>
+            </h3>
 
-            {subtitle && <h3
+            {subtitle && <h4
             className='Section_subtitle'
             >
-                {Parser(subtitle)}
-            </h3>}
+                {Parser(subtitle.childMarkdownRemark.html)}
+            </h4>}
 
-            {events && events.map((event, index) => (
+            {allContentfulEvent.edges.map((event, index) => (
                 <Event 
-                key={event.id}
+                key={event.node.id}
                 number={index + 1}
-                event={event}
+                event={event.node}
                 ></Event>
             ))}
 
@@ -39,9 +41,16 @@ const Events = ({ section }) => {
 
 const Event = ({ number, event }) => {
 
-    const { dateTime, venue, city, pill} = event;
+    const { slug, dateAndTime, venue, city } = event;
 
-    const date = new Date(dateTime);
+    const pill = {
+        text: 'Join!',
+        to: {
+            slug: `/events/${slug}`
+        }
+    }
+
+    const date = new Date(dateAndTime);
     const day = `0${date.getDate()}`.substr(-2);
     const month = `0${1 + date.getMonth()}`.substr(-2);
     const year = date.getFullYear();
@@ -85,4 +94,26 @@ const Event = ({ number, event }) => {
     return jsx;
 }
 
-export default Events;
+export default props => (
+    <StaticQuery
+        query={query}
+        render={data => <Events data={data} {...props}></Events>}
+    />
+)
+
+export const query = graphql`
+{
+    allContentfulEvent (sort: {fields: dateAndTime, order: ASC}) {
+        edges {
+            node {
+                id
+                slug
+                dateAndTime
+                venue
+                city
+            }
+        }
+    }
+}
+`
+

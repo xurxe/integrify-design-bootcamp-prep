@@ -55,6 +55,8 @@
 
 16. Added packages:
     - gatsby-source-contentful
+    - gatsby-transformer-remark
+
 
 17. Added to gatsby-config.js
     > require("dotenv").config()
@@ -66,3 +68,4 @@
                 accessToken: process.env.accessToken,
             },
         },
+        'gatsby-transformer-remark',

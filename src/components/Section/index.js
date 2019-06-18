@@ -6,9 +6,11 @@ import Events from '../sections/Events';
 import Members from '../sections/Members';
 
 const Section = ({ section }) => {
+
+    const { __typename } = section;
     let jsx;
     
-    if (section.type === 'titlesAndThreeColumns') {
+    if (__typename === 'ContentfulTitlesAndThreeColumns') {
         jsx = (
             <TitlesAndThreeColumns
             section={section}
@@ -16,7 +18,7 @@ const Section = ({ section }) => {
         )
     }
 
-    else if (section.type === 'events') {
+    else if (__typename === 'ContentfulEvents') {
         jsx = (
             <Events
             section={section}
@@ -24,7 +26,7 @@ const Section = ({ section }) => {
         )
     }
 
-    else if (section.type === 'members') {
+    else if (__typename === 'ContentfulMembers') {
         jsx = (
             <Members
             section={section}

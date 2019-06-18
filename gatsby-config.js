@@ -24,5 +24,7 @@ module.exports = {
                 postCssPlugins: [require(`autoprefixer`)],
             },
         },
+        'gatsby-transformer-remark',
+
     ],
 }
