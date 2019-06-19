@@ -8,6 +8,10 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        `gatsby-plugin-manifest`,
+        'gatsby-transformer-remark',
         {
             resolve: `gatsby-source-contentful`,
             options: {
@@ -15,10 +19,6 @@ module.exports = {
                 accessToken: process.env.accessToken,
             },
         },
-        `gatsby-transformer-sharp`,
-        `gatsby-plugin-sharp`,
-        `gatsby-plugin-manifest`,
-        'gatsby-transformer-remark',
         {
             resolve: `gatsby-plugin-postcss`,
             options: {
