@@ -1,0 +1,13 @@
+.Section_title {
+    font-family: 'Baumans', monospace;
+    font-weight: normal;
+}
+
+.Section_subtitle {
+    font-weight: normal;
+}
+
+.Section strong {
+    font-weight: 900;
+}
+

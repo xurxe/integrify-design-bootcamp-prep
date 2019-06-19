@@ -43,8 +43,16 @@
 
 11. Added package:
     - gatsby-plugin-postcss
+    - autoprefixer
 
 12. Updated gatsby-config.js
+
+    {
+        resolve: `gatsby-plugin-postcss`,
+        options: {
+            postCssPlugins: [require(`autoprefixer`)],
+        },
+    }
 
 13. Added package:
     - html-react-parser

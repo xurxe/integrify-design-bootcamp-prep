@@ -18,13 +18,12 @@ module.exports = {
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
         `gatsby-plugin-manifest`,
+        'gatsby-transformer-remark',
         {
             resolve: `gatsby-plugin-postcss`,
             options: {
                 postCssPlugins: [require(`autoprefixer`)],
             },
-        },
-        'gatsby-transformer-remark',
-
+        }
     ],
 }

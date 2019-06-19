@@ -15,12 +15,16 @@
 .Header_title {
     color: var(--cyan);
     display: block;
+    font-family: 'Baumans', monospace;
     font-size: 40px;
+    font-weight: normal;
 }
 
 .Header_subtitle {
     color: white;
+    font-family: 'Baumans', monospace;
     font-size: 30px;
+    font-weight: normal;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;

@@ -47,6 +47,11 @@ const HelmetComponent = () => {
             integrity='sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay' 
             crossorigin='anonymous' 
             />
+
+            <link 
+            rel="stylesheet" 
+            href="https://fonts.googleapis.com/css?family=Baumans|Exo+2&display=swap" 
+            />
         
         </Helmet>
     )
