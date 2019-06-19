@@ -42,3 +42,7 @@
 .Member_job {
     font-size: 16px;
 }
+
+.Member_company {
+    font-style: italic;
+}

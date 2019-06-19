@@ -3,8 +3,6 @@ import './styles.css';
 
 import { StaticQuery, graphql } from 'gatsby';
 import Parser from 'html-react-parser';
-import Img from 'gatsby-image';
-
 const Footer = ({ data }) => {
 
     const { contentfulFooter } = data;
@@ -23,13 +21,13 @@ const Footer = ({ data }) => {
                 className='Footer_subBox Footer_subBox___socialMedia'
                 >
                     <h4
-                    className='Footer_socialMediaTitle'
+                    className='Footer_subBox_title'
                     >
                         {socialMediaTitle}
                     </h4>
 
                     <div
-                    className='Footer_socialMediaLinks'
+                    className='Footer_subBox_content'
                     >
                         {socialMediaProfiles.map(profile => (
                             <a 
@@ -47,12 +45,19 @@ const Footer = ({ data }) => {
                 className='Footer_subBox Footer_subBox___map'
                 >
                     <h4
-                    className='Footer_mapTitle'>
+                    className='Footer_subBox_title'>
                         {Parser(mapTitle.childMarkdownRemark.html)}
                     </h4>
 
-                    <Img
-                    fluid={mapImage.fluid}></Img>
+                    <div
+                    className='Footer_subBox_content'
+                    >
+                        <img
+                        className='Footer_map'
+                        src={`https:${mapImage.file.url}`}
+                        alt='Map'
+                        ></img>
+                    </div>
 
                 </div>
                 
@@ -64,10 +69,12 @@ const Footer = ({ data }) => {
                 <div
                 className='Footer_subBox Footer_subBox___copyrightAndCities'
                 >
-                    <p><b>
+                    <p
+                    className='Footer_copyright'>
                         {copyright} 2018&mdash;{currentYear}
-                    </b></p>
-                    <p>
+                    </p>
+                    <p
+                    className='Footer_cities'>
                         {cities.map((city, index) => (
                             index !== 0 
                             ? ` / ${city}` 
@@ -106,7 +113,11 @@ export const query = graphql`
             }
         }
         mapImage {
-            id
+            file {
+                url
+                fileName
+                contentType
+            }
             fluid {
                 base64
                 aspectRatio

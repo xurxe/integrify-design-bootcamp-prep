@@ -2,12 +2,12 @@ import React from 'react';
 import './styles.css';
 
 import { StaticQuery, graphql } from 'gatsby';
-/* import Parser from 'html-react-parser'; */
+import Parser from 'html-react-parser';
 import Pill from '../../Pill';
 
 const Events = ({ data, section }) => {
     
-    const { title/* , subtitle */ } = section;
+    const { title, subtitle } = section;
     const { allContentfulEvent } = data;
     
     const jsx = (
@@ -19,11 +19,11 @@ const Events = ({ data, section }) => {
                 {title}
             </h3>
 
-            {/* subtitle && <h4
+            {subtitle && <h4
             className='Section_subtitle'
             >
                 {Parser(subtitle.childMarkdownRemark.html)}
-            </h4> */}
+            </h4>}
 
             {allContentfulEvent.edges.map((event, index) => (
                 <Event 

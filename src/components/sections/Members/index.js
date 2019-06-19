@@ -62,7 +62,15 @@ const Member = ({ member }) => {
                 
                 <p
                 className='Member_job'>
-                    {position} / {company}
+                    <span
+                    className='Member_position'>
+                        {position}
+                    </span>
+                    &ensp;/&ensp;
+                    <span
+                    className='Member_company'>
+                        {company}
+                    </span>
                 </p>
             </div>
         </div>

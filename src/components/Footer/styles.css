@@ -61,19 +61,18 @@
     outline: none;
 }
 
-.Footer_mapTitle {
+.Footer_subBox_title {
     font-weight: normal;
     margin-bottom: 20px;
 }
 
-.Footer_mapTitle strong {
+.Footer_subBox_title strong {
     color: var(--cyan);
-    font-size: 25.5px;
 }
 
-.Footer_mapTitle em {
+.Footer_subBox_title em {
+    color: var(--cyan);
     font-style: normal;
-    font-size: 25.5px;
 }
 
 .Footer_box___bottom {
@@ -81,6 +80,15 @@
     color: var(--blue);
     font-size: 16px;
     padding: 20px;
+}
+
+.Footer_map {
+    width: 100%;
+}
+
+.Footer_copyright {
+    font-weight: bold;
+    margin-bottom: 5px;
 }
 
 

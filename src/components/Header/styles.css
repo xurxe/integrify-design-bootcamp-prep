@@ -2,9 +2,32 @@
     background-color: var(--blue);
     display: grid;
     grid-template-columns: 2fr 1fr;
-    height: 100vh;
+    min-height: 100vh;
     width: 100%;
-    padding: 100px;
+    padding-top: 120px;
+    padding-bottom: 60px;
+    padding-right: 60px;
+    padding-left: 60px;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Header {
+        padding-right: calc(20px + (60 - 20) * (100vw - 600px) / (900 - 600));
+        padding-left: calc(20px + (60 - 20) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .Header {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Header {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
 }
 
 .Header_box___text {
@@ -13,20 +36,46 @@
 
 .Header_title {
     color: var(--cyan);
-    display: block;
     font-family: 'Baumans', monospace;
-    font-size: 40px;
+    font-size: 7vw;
     font-weight: normal;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Header_title {
+        font-size: calc(41px + (63 - 41) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Header_title {
+        font-size: 41px;
+        margin-bottom: 20px;
+    }
 }
 
 .Header_subtitle {
     color: white;
-    font-family: 'Baumans', monospace;
-    font-size: 30px;
-    font-weight: normal;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -o-font-smoothing: antialiased;
+    font-family: 'Baumans', monospace;
+    font-size: 4.5vw;
+    font-weight: normal;
+    margin-bottom: 40px;
 }
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Header_subtitle {
+        font-size: calc(25px + (40.5 - 25) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Header_subtitle {
+        font-size: 25.5px;
+    }
+}
+ 

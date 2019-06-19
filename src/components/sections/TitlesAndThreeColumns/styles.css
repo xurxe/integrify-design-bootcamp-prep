@@ -10,3 +10,7 @@
         grid-template-columns: 1fr;
     }
 }
+
+.Section_content___titlesAndThreeColumns p {
+    line-height: 1.618em;
+}
