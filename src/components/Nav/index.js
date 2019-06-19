@@ -1,13 +1,13 @@
 import React from 'react';
 import './styles.css';
 
-import { StaticQuery, graphql } from 'gatsby';
-import { Link } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
+import Img from 'gatsby-image';
 
 const Nav = ({ data }) => {
 
     const { contentfulNavigationBar } = data;
-    const { logoLeft, linksCenter, linkRight, iconFontAwesomeRight } = contentfulNavigationBar;
+    const { logoLeft, linksCenter, linkRight } = contentfulNavigationBar;
 
     const jsx = (
         <nav 
@@ -17,8 +17,13 @@ const Nav = ({ data }) => {
             className='Nav_box'
             >
                 <button 
-                className='Nav_logo hvr-outline-out___nav'
-                ></button>
+                className='Nav_button hvr-outline-out___nav'
+                >
+                    <Img
+                    fluid={logoLeft.fluid}
+                    ></Img>
+
+                </button>
             </div>
 
             <div 
@@ -39,7 +44,7 @@ const Nav = ({ data }) => {
             className='Nav_box'
             >
                 <Link  
-                className='Nav_link Nav_link___login hvr-underline-out___nav' 
+                className='Nav_link Nav_link___right hvr-underline-out___nav' 
                 to={`/${linkRight.slug}`}
                 >
                     {linkRight.name}
@@ -61,7 +66,6 @@ export default props => (
 export const query = graphql`
 {
     contentfulNavigationBar {
-        id
         logoLeft {
             fluid {
                 base64
@@ -89,7 +93,6 @@ export const query = graphql`
             name
             slug
         }
-        iconFontAwesomeRight
     }
 }
 `

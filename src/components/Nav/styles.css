@@ -8,19 +8,24 @@
     position: fixed;
     top: 0;
     width: 100%;
+    z-index: 10;
 }
 
 .Nav_box {
     display: flex;
 }
 
-.Nav_logo {
+.Nav_button {
     background-color: var(--blue);
     border: none;
     cursor: pointer;
     height: 40px;
     width: 40px;
     outline: none;
+}
+
+.Nav_logo {
+    width: 100%;
 }
 
 .Nav_link {
@@ -30,9 +35,8 @@
     text-decoration: none;
 }
 
-.Nav_link___login {
+.Nav_link___right {
     font-size: 16px;
-    margin: 0;
 }
 
 

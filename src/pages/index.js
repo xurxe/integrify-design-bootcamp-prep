@@ -71,10 +71,20 @@ query {
                     name
                     position
                     company
+                    image {
+                        fluid {
+                            base64
+                            aspectRatio
+                            src
+                            srcSet
+                            srcWebp
+                            srcSetWebp
+                            sizes
+                        }
+                    }
                 }
             }
         }
     }
 }
-  
 `

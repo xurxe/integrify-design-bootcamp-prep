@@ -3,6 +3,7 @@ import './styles.css';
 
 import { StaticQuery, graphql } from 'gatsby';
 import Parser from 'html-react-parser';
+import Img from 'gatsby-image';
 
 const Footer = ({ data }) => {
 
@@ -46,6 +47,9 @@ const Footer = ({ data }) => {
                         {Parser(mapTitle.childMarkdownRemark.html)}
                     </h4>
 
+                    <Img
+                    fluid={mapImage.fluid}></Img>
+
                 </div>
                 
             </div>
@@ -62,7 +66,7 @@ const Footer = ({ data }) => {
                     <p>
                         {cities.map((city, index) => (
                             index !== 0 
-                            ? ` | ${city}` 
+                            ? ` / ${city}` 
                             : city
                         ))}
                     </p>

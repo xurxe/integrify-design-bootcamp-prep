@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 
 import Parser from 'html-react-parser';
+import Img from 'gatsby-image';
 
 const Members = ({ section }) => {
 
@@ -41,15 +42,16 @@ const Members = ({ section }) => {
 
 const Member = ({ member }) => {
 
-    const { name, position, company } = member;
+    const { name, position, company, image } = member;
     
     const jsx = (
         <div
         className='Member'
         >
-            <div
+            <Img
+            fluid={image.fluid}
             className='Member_photo'
-            ></div>
+            ></Img>
 
             <div
             className='Member_text'>
