@@ -1,10 +1,13 @@
 import React from 'react';
 import './styles.css';
 
-import Data from '../../data';
+import { StaticQuery, graphql } from 'gatsby';
 import Parser from 'html-react-parser';
 
-const Footer = () => {
+const Footer = ({ data }) => {
+
+    const { contentfulFooter } = data;
+    const { socialMediaTitle, socialMediaProfiles, mapTitle, mapImage, copyright, cities} = contentfulFooter;
 
     const currentYear = new Date().getFullYear();
     
@@ -18,19 +21,19 @@ const Footer = () => {
                 <div
                 className='Footer_subBox Footer_subBox___socialMedia'
                 >
-                    <h3
+                    <h4
                     className='Footer_socialMediaTitle'
                     >
-                        {Data.footer.socialMedia.title}
-                    </h3>
+                        {socialMediaTitle}
+                    </h4>
 
-                    {Data.footer.socialMedia.links.map(item => (
+                    {socialMediaProfiles.map(profile => (
                         <a 
-                        key={item.id}
+                        key={profile.id}
                         className='Footer_socialMediaIcon hvr-underline-out___footer'
-                        href={item.href}
-                        aria-label={item.name}>
-                            {Parser(item.icon)}
+                        href={profile.url}
+                        aria-label={profile.name}>
+                            {Parser(profile.iconFontAwesome)}
                         </a>
                     ))}
                 </div>
@@ -38,10 +41,10 @@ const Footer = () => {
                 <div
                 className='Footer_subBox Footer_subBox___map'
                 >
-                    <h3
+                    <h4
                     className='Footer_mapTitle'>
-                        <strong>Think Tank United</strong> is currently connecting <em>287</em> minds from <em>19</em> different countries.
-                    </h3>
+                        {Parser(mapTitle.childMarkdownRemark.html)}
+                    </h4>
 
                 </div>
                 
@@ -54,10 +57,10 @@ const Footer = () => {
                 className='Footer_subBox Footer_subBox___copyrightAndCities'
                 >
                     <p><b>
-                        {Data.footer.copyrightAndCities.copyright} &copy; 2018&mdash;{currentYear}
+                        {copyright} 2018&mdash;{currentYear}
                     </b></p>
                     <p>
-                        {Data.footer.copyrightAndCities.cities.map((city, index) => (
+                        {cities.map((city, index) => (
                             index !== 0 
                             ? ` | ${city}` 
                             : city
@@ -71,4 +74,43 @@ const Footer = () => {
     return jsx;
 }
 
-export default Footer;
+export default props => (
+    <StaticQuery
+        query={query}
+        render={data => <Footer data={data} {...props}></Footer>}
+    />
+)
+
+export const query = graphql`
+{
+	contentfulFooter {
+        socialMediaTitle
+        socialMediaProfiles {
+            id
+            name
+            url
+            iconFontAwesome
+        }
+        mapTitle {
+            childMarkdownRemark {
+                id
+                html
+            }
+        }
+        mapImage {
+            id
+            fluid {
+                base64
+                aspectRatio
+                src
+                srcSet
+                srcWebp
+                srcSetWebp
+                sizes
+            }
+        }
+        copyright
+        cities
+	}
+}
+`
