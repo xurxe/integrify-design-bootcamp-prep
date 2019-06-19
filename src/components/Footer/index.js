@@ -28,15 +28,19 @@ const Footer = ({ data }) => {
                         {socialMediaTitle}
                     </h4>
 
-                    {socialMediaProfiles.map(profile => (
-                        <a 
-                        key={profile.id}
-                        className='Footer_socialMediaIcon hvr-underline-out___footer'
-                        href={profile.url}
-                        aria-label={profile.name}>
-                            {Parser(profile.iconFontAwesome)}
-                        </a>
-                    ))}
+                    <div
+                    className='Footer_socialMediaLinks'
+                    >
+                        {socialMediaProfiles.map(profile => (
+                            <a 
+                            key={profile.id}
+                            className='Footer_socialMediaIcon hvr-underline-out___footer'
+                            href={profile.url}
+                            aria-label={profile.name}>
+                                {Parser(profile.iconFontAwesome)}
+                            </a>
+                        ))}
+                    </div>
                 </div>
 
                 <div

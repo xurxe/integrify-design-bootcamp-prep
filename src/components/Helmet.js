@@ -50,7 +50,7 @@ const HelmetComponent = () => {
 
             <link 
             rel="stylesheet" 
-            href="https://fonts.googleapis.com/css?family=Baumans|Exo+2&display=swap" 
+            href="https://fonts.googleapis.com/css?family=Baumans|Exo+2|Exo+2+Thin|Exo+2+Extra-Light|Exo+2+Light|Exo+2+Regular|Exo+2+Medium|Exo+2+Semi-Bold|Exo+2+Bold|Exo+2+Extra-Bold|Exo+2+Black&display=swap" 
             />
         
         </Helmet>

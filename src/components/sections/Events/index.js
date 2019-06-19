@@ -2,12 +2,12 @@ import React from 'react';
 import './styles.css';
 
 import { StaticQuery, graphql } from 'gatsby';
-import Parser from 'html-react-parser';
+/* import Parser from 'html-react-parser'; */
 import Pill from '../../Pill';
 
 const Events = ({ data, section }) => {
     
-    const { title, subtitle } = section;
+    const { title/* , subtitle */ } = section;
     const { allContentfulEvent } = data;
     
     const jsx = (
@@ -19,11 +19,11 @@ const Events = ({ data, section }) => {
                 {title}
             </h3>
 
-            {subtitle && <h4
+            {/* subtitle && <h4
             className='Section_subtitle'
             >
                 {Parser(subtitle.childMarkdownRemark.html)}
-            </h4>}
+            </h4> */}
 
             {allContentfulEvent.edges.map((event, index) => (
                 <Event 
@@ -61,11 +61,12 @@ const Event = ({ number, event }) => {
         className='Event'
         >
             <div
+            className='Event_number'>
+                {number}
+            </div>
+
+            <div
             className='Event_info'>
-                <div
-                className='Event_number'>
-                    {number}
-                </div>
 
                 <div
                 className='Event_dateAndLocation'
@@ -82,11 +83,11 @@ const Event = ({ number, event }) => {
                         <strong>{venue}</strong>, {city}
                     </p>
                 </div>
-            </div>
 
-            <Pill
-            pill={pill}
-            ></Pill>
+                <Pill
+                pill={pill}
+                ></Pill>
+            </div>
 
         </div>
     )

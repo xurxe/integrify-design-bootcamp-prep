@@ -17,11 +17,24 @@
     -o-font-smoothing: antialiased;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    padding: 40px 0;
+    padding: 60px 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .Footer_box___top {
+        grid-template-columns: 1fr;
+        grid-row-gap: 60px;
+    }
 }
 
 .Footer_subBox {
-    padding: 0 40px;
+    padding: 0 60px;
+}
+
+@media only screen and (max-width: 800px) {
+    .Footer_subBox {
+        padding: 0 20px;
+    }
 }
 
 .Footer_subBox___socialMedia {
@@ -49,24 +62,25 @@
 }
 
 .Footer_mapTitle {
-    font-size: 15px;
-    font-weight: normal; 
+    font-weight: normal;
+    margin-bottom: 20px;
 }
 
 .Footer_mapTitle strong {
     color: var(--cyan);
-    font-size: 20px;
+    font-size: 25.5px;
 }
 
 .Footer_mapTitle em {
     font-style: normal;
-    font-size: 20px;
+    font-size: 25.5px;
 }
 
 .Footer_box___bottom {
     background-color: var(--cyan);
     color: var(--blue);
-    padding: 15px;
+    font-size: 16px;
+    padding: 20px;
 }
 
 

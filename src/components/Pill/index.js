@@ -9,7 +9,7 @@ const Pill = ({ pill }) => {
     
     const jsx = (
         <Link to={to.slug}
-        className='Pill'
+        className='Pill hvr-hollow '
         >
             {text}
         </Link>
