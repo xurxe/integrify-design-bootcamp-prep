@@ -13,6 +13,17 @@ export default IndexPage;
 
 export const query = graphql`
 {
+    contentfulSeo {
+        title
+        description
+        image {
+            file {
+                url
+            }
+        }
+        url
+        keywords
+    }
     contentfulIndex {
         name
         headerTitle

@@ -1,7 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-const HelmetComponent = () => {
+const HelmetComponent = ({ contentfulSeo }) => {
+
+    const { title, description, image, url, keywords, author } = contentfulSeo;
     const jsx = (
         <Helmet>
 
@@ -9,14 +11,14 @@ const HelmetComponent = () => {
             lang='en'
             ></html>
 
-{/*             <title>
-                Xurxe Toivo García
+            <title>
+                {title}
             </title>
 
-            <meta property="og:title" content="Xurxe Toivo García" />
-            <meta property="og:description" content="Xurxe makes still, moving, and interactive things." />
-            <meta property="og:image" content={contentfulSeo.image.fixed.src} />
-            <meta property="og:url" content="http://xurxe.com/" />
+            <meta property="og:title" content={title} />
+            <meta property="og:description" content={description} />
+            <meta property="og:image" content={`https:${image.file.url}`} />
+            <meta property="og:url" content={url} />
             <meta name="twitter:card" content="summary_large_image" />
 
             <meta 
@@ -31,15 +33,15 @@ const HelmetComponent = () => {
 
             <meta
             name="description"
-            content="Xurxe makes still, moving, and interactive things."
+            content={description}
             />
 
             <meta 
             name="keywords"
-            content="Xurxe, Xurxe Toivo, Xurxe Garcia, Xurxe Toivo García, web developer, web development, web designer, web design, illustration, animation, watercolor, Integrify, Finland, Helsinki"
+            content={keywords}
             />
 
-            <meta name="author" content="Xurxe Toivo Garcia" /> */}
+            <meta name="author" content={author} />
 
             <link 
             rel='stylesheet' 

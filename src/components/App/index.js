@@ -9,7 +9,7 @@ import Footer from '../Footer';
 
 const App = ({ data }) => {
 
-    const { contentfulIndex } = data;
+    const { contentfulSeo, contentfulIndex } = data;
     const { name, headerTitle, headerSubtitle, headerPill, headerImage, headerImageAlt, main } = contentfulIndex;
     const header = {
         title: headerTitle,
@@ -22,7 +22,8 @@ const App = ({ data }) => {
     const jsx = (
         <div className='App'>
 
-            <HelmetComponent></HelmetComponent>
+            <HelmetComponent
+            contentfulSeo={contentfulSeo}></HelmetComponent>
 
             <Nav></Nav>
 
