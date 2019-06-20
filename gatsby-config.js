@@ -1,3 +1,5 @@
+require("dotenv").config()
+
 module.exports = {
     siteMetadata: {
         title: `Integrify Design Bootcamp`,
@@ -6,15 +8,22 @@ module.exports = {
     },
     plugins: [
         `gatsby-plugin-react-helmet`,
-        {
-            resolve: `gatsby-source-filesystem`,
-            options: {
-                name: `images`,
-                path: `${__dirname}/src/images`,
-            },
-        },
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        `gatsby-plugin-manifest`
+        `gatsby-plugin-manifest`,
+        'gatsby-transformer-remark',
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: process.env.spaceId,
+                accessToken: process.env.accessToken,
+            },
+        },
+        {
+            resolve: `gatsby-plugin-postcss`,
+            options: {
+                postCssPlugins: [require(`autoprefixer`)],
+            },
+        }
     ],
 }

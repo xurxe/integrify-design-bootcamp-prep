@@ -1,0 +1,73 @@
+.Section {
+    margin-top: 120px;
+    margin-bottom: 180px;
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Section {
+        margin-top: calc(60px + (120 - 60) * (100vw - 600px) / (900 - 600));
+        margin-bottom: calc(90px + (180 - 90) * (100vw - 600px) / (900 - 600));
+        margin-right: calc(20px + (90 - 20) * (100vw - 600px) / (900 - 600));
+        margin-left: calc(20px + (90 - 20) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Section {
+        margin-top: 60px;
+        margin-bottom: 90px;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+}
+
+.Section_title {
+    font-family: 'Baumans', monospace;
+    font-size: 6vw;
+    font-weight: normal;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Section_title {
+        font-size: calc(41px + (54 - 41) * (100vw - 600px) / (900 - 600));
+        margin-bottom: calc(20px + (40 - 20) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Section_title {
+        font-size: 41px;
+        margin-bottom: 20px;
+    }
+}
+
+.Section_subtitle {
+    font-size: 3vw;
+    font-weight: normal;
+    margin-bottom: 60px;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Section_subtitle {
+        font-size: calc(25px + (27 - 25) * (100vw - 600px) / (900 - 600));
+        margin-bottom: calc(30px + (60 - 30) * (100vw - 600px) / (900 - 600));
+        margin-right: calc(0px + (27 - 0) * (100vw - 600px) / (900 - 600));
+        margin-left: calc(0px + (27 - 0) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Section_subtitle {
+        font-size: 25.5px;
+        margin-bottom: 30px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}

@@ -1,0 +1,125 @@
+.Section_content___events {
+    margin-right: 10vw;
+    margin-left: 10vw;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Section_content___events {
+        margin-right: calc(0px + (90 - 0) * (100vw - 600px) / (900 - 600));
+        margin-left: calc(0px + (90 - 0) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Section_content___events {
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}
+
+.Event_form {
+    margin-bottom: 60px;
+}
+
+.Event_search {
+    border: none;
+    border-radius: 20px;
+    height: 60px;
+}
+
+.Event_searchBox {
+    background-color: var(--grey);
+    border: none;
+    border-radius: 30px 0 0 30px;
+    height: 100%;
+    width: calc(100% - 60px);
+    font-size: 20px;
+    padding: 0 20px;
+    color: var(--blue);
+    text-align: center;
+}
+
+.Event_searchButton {
+    border: none;
+    border-radius: 0 30px 30px 0;
+    color: white;
+    height: 60px;
+    width: 60px;
+    font-size: 20px;
+
+}
+
+.Event {
+    border-bottom: 5px solid var(--cyan);
+    display: flex;
+    align-items: center;
+    justify-content: stretch; 
+    margin-bottom: 20px;
+}
+
+
+.Event_number {
+    align-self: stretch;
+    background-color: var(--blue);
+    border-radius: 4px 4px 0 0;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    flex-shrink: 0;
+    min-height: 60px;
+    width: 60px;
+    margin-right: 16px;
+}
+
+.Event_info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.Event_date {
+    font-size: 16px;
+}
+
+
+
+/* Adapted from hover.css */
+
+.hvr-hollow___searchBox {
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+}
+
+.hvr-hollow___searchBox:hover, .hvr-hollow___searchBox:focus, .hvr-hollow___searchBox:active {
+    background: white;
+    box-shadow: inset 0 0 0 4px var(--blue), 0 0 2px rgba(0, 0, 0, 0);
+    outline: none;
+}
+
+
+
+.hvr-hollow___searchButton {
+    background-color: var(--blue);
+    color: white;
+    display: inline-block;
+    vertical-align: middle;
+    transform: perspective(1px) translateZ(0);
+    transition-duration: 0.3s;
+}
+
+.hvr-hollow___searchButton:hover, .hvr-hollow___searchButton:focus, .hvr-hollow___searchButton:active {
+    background-color: white;
+    box-shadow: inset 0 0 0 4px var(--grey), 0 0 2px rgba(0, 0, 0, 0);
+    color: var(--blue);
+    outline: none;
+}

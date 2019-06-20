@@ -1,0 +1,132 @@
+.Footer {
+    width: 100%;
+}
+
+.Footer_box {
+    text-align: center;
+}
+
+.Footer_box___top {
+    background-color: var(--blue);
+    border-top: 10px solid var(--cyan);
+    color: white;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    -o-font-smoothing: antialiased;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 60px 0;
+}
+
+@media only screen and (max-width: 800px) {
+    .Footer_box___top {
+        grid-template-columns: 1fr;
+        grid-row-gap: 60px;
+    }
+}
+
+.Footer_subBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 60px;
+}
+
+@media only screen and (max-width: 800px) {
+    .Footer_subBox {
+        padding: 0 20px;
+    }
+}
+
+.Footer_subBox___socialMedia {
+    border-right: 1px solid var(--cyan);
+}
+
+@media only screen and (max-width: 800px) {
+    .Footer_subBox___socialMedia {
+        border-right: none;
+    }
+}
+
+.Footer_socialMediaTitle {
+    font-style: italic;
+    font-weight: normal;
+}
+
+.Footer_socialMediaIcon {
+    color: var(--cyan);
+    font-size: 40px;
+    margin: 10px;
+    transition-duration: 0.3s;
+    transition-property: color;
+    transition-timing-function: linear;
+}
+
+.Footer_socialMediaIcon:hover,
+.Footer_socialMediaIcon:focus {
+    color: white;
+    outline: none;
+}
+
+.Footer_subBox_title {
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.Footer_subBox_title strong {
+    color: var(--cyan);
+}
+
+.Footer_subBox_title em {
+    color: var(--cyan);
+    font-style: normal;
+}
+
+.Footer_box___bottom {
+    background-color: var(--cyan);
+    color: var(--blue);
+    font-size: 16px;
+    padding: 20px;
+}
+
+.Footer_map {
+    width: 100%;
+}
+
+.Footer_copyright {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+
+
+/* Adapted from hover.css */
+
+.hvr-underline-out___footer {
+    display: inline-block;
+    outline: none;
+    position: relative;
+    transform: perspective(1px) translateZ(0);
+}
+
+.hvr-underline-out___footer:before {
+    content: '';
+    border-bottom: white solid 2px;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition-duration: 0.3s;
+    transition-property: opacity, bottom;
+    transition-timing-function: ease-in-out;
+}
+
+.hvr-underline-out___footer:hover:before, 
+.hvr-underline-out___footer:focus:before, 
+.hvr-underline-out___footer:active:before {
+    opacity: 1;
+    bottom: -4px;
+}

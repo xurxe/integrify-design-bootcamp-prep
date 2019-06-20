@@ -1,0 +1,16 @@
+.Section_content___titlesAndThreeColumns {
+    display: grid;
+    grid-gap: 60px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+@media only screen and (max-width: 1100px) {
+    .Section_content___titlesAndThreeColumns {
+        grid-gap: 20px;
+        grid-template-columns: 1fr;
+    }
+}
+
+.Section_content___titlesAndThreeColumns p {
+    line-height: 1.618em;
+}

@@ -34,3 +34,49 @@
 
 7. Protected master branch on GitHub:
     - repository => settings => Require pull request reviews before merging
+
+8. Deployed master and develop branches on Netlify
+
+9. Fixed build bugs on develop
+
+10. Merged to master
+
+11. Added package:
+    - gatsby-plugin-postcss
+    - autoprefixer
+
+12. Updated gatsby-config.js
+
+    {
+        resolve: `gatsby-plugin-postcss`,
+        options: {
+            postCssPlugins: [require(`autoprefixer`)],
+        },
+    }
+
+13. Added package:
+    - html-react-parser
+
+14. Set up Contentful
+
+15. Created .env file
+
+16. Added packages:
+    - gatsby-source-contentful
+    - gatsby-transformer-remark
+
+
+17. Added to gatsby-config.js
+    > require("dotenv").config()
+    > plugins:
+        {
+            resolve: `gatsby-source-contentful`,
+            options: {
+                spaceId: process.env.spaceId,
+                accessToken: process.env.accessToken,
+            },
+        },
+        'gatsby-transformer-remark',
+
+18. Added packages:
+    - react-resize-detector
