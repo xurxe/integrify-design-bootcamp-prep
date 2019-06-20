@@ -1,6 +1,7 @@
 :root {
     --blue: #2B2570;
     --cyan: #1DFFC2;
+    --grey: #e0e0e0;
     color: var(--blue);
     font-size: 20px;
 }

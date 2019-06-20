@@ -10,12 +10,13 @@ import Footer from '../Footer';
 const App = ({ data }) => {
 
     const { contentfulIndex } = data;
-    const { name, headerTitle, headerSubtitle, headerPill, main } = contentfulIndex;
+    const { name, headerTitle, headerSubtitle, headerPill, headerImage, headerImageAlt, main } = contentfulIndex;
     const header = {
         title: headerTitle,
         subtitle: headerSubtitle,
         pill: headerPill,
-        // image: image (TODO: add to schema)
+        image: headerImage,
+        alt: headerImageAlt,
     }
 
     const jsx = (

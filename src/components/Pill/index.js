@@ -3,13 +3,13 @@ import './styles.css';
 
 import { Link } from 'gatsby';
 
-const Pill = ({ pill }) => {
+const Pill = ({ from, pill }) => {
 
     const { text, to } = pill;
     
     const jsx = (
         <Link to={to.slug}
-        className='Pill hvr-hollow '
+        className={`Pill Pill___${from} hvr-hollow`}
         >
             {text}
         </Link>

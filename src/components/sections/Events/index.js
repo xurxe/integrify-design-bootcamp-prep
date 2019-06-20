@@ -25,19 +25,52 @@ const Events = ({ data, section }) => {
                 {Parser(subtitle.childMarkdownRemark.html)}
             </h4>}
 
-            {allContentfulEvent.edges.map((event, index) => (
-                <Event 
-                key={event.node.id}
-                number={index + 1}
-                event={event.node}
-                ></Event>
-            ))}
+            <div
+            className='Section_content Section_content___events'
+            >
+                <EventSearch></EventSearch>
+
+                {allContentfulEvent.edges.map((event, index) => (
+                    <Event 
+                    key={event.node.id}
+                    number={index + 1}
+                    event={event.node}
+                    ></Event>
+                ))}
+            </div>
 
         </section>
     )
 
     return jsx;
 }
+
+const EventSearch = () => {
+    
+    const jsx = (
+        <form
+        className='Event_form'>
+            <fieldset
+            className='Event_search'
+            >
+                <input 
+                type='text'
+                className='Event_searchBox hvr-hollow___searchBox'
+                ></input>
+
+                <button 
+                type='submit'
+                className='Event_searchButton hvr-hollow___searchButton'
+                >
+                    <i class="fas fa-search"></i>
+                </button>
+            </fieldset> 
+        </form>
+    )
+
+    return jsx;
+}
+
 
 const Event = ({ number, event }) => {
 
@@ -85,6 +118,7 @@ const Event = ({ number, event }) => {
                 </div>
 
                 <Pill
+                from='events'
                 pill={pill}
                 ></Pill>
             </div>

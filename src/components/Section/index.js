@@ -2,6 +2,7 @@ import React from 'react';
 import './styles.css';
 
 import TitlesAndThreeColumns from '../sections/TitlesAndThreeColumns';
+import TitleAndLogos from '../sections/TitleAndLogos';
 import Events from '../sections/Events';
 import Members from '../sections/Members';
 
@@ -15,6 +16,14 @@ const Section = ({ section }) => {
             <TitlesAndThreeColumns
             section={section}
             ></TitlesAndThreeColumns>
+        )
+    }
+
+    else if (__typename === 'ContentfulTitleAndLogos') {
+        jsx = (
+            <TitleAndLogos
+            section={section}
+            ></TitleAndLogos>
         )
     }
 

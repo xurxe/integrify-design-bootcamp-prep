@@ -12,7 +12,7 @@ const IndexPage = ({ data }) => (
 export default IndexPage;
 
 export const query = graphql`
-query {
+{
     contentfulIndex {
         name
         headerTitle
@@ -23,6 +23,25 @@ query {
                 slug
             }
         }
+        headerImage {
+            id
+            id
+            file {
+                url
+                fileName
+                contentType
+            }
+            fluid {
+                base64
+                aspectRatio
+                src
+                srcSet
+                srcWebp
+                srcSetWebp
+                sizes
+            }
+        }
+        headerImageAlt
         main {
             __typename
             ... on ContentfulTitlesAndThreeColumns {
@@ -72,6 +91,31 @@ query {
                     position
                     company
                     image {
+                        fluid {
+                            base64
+                            aspectRatio
+                            src
+                            srcSet
+                            srcWebp
+                            srcSetWebp
+                            sizes
+                        }
+                    }
+                }
+            }
+            ... on ContentfulTitleAndLogos {
+                id
+                title
+                logos {
+                    id
+                    name
+                    logo {
+                        id
+                        file {
+                            url
+                            fileName
+                            contentType
+                        }
                         fluid {
                             base64
                             aspectRatio

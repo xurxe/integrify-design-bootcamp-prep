@@ -1,0 +1,41 @@
+.Section_title___titleAndLogos {
+    font-size: 3vw;
+    font-weight: normal;
+    margin-bottom: 60px;
+    margin-right: 3vw;
+    margin-left: 3vw;
+    text-align: center;
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Section_title___titleAndLogos {
+        font-size: calc(25px + (27 - 25) * (100vw - 600px) / (900 - 600));
+        margin-bottom: calc(30px + (60 - 30) * (100vw - 600px) / (900 - 600));
+        margin-right: calc(0px + (27 - 0) * (100vw - 600px) / (900 - 600));
+        margin-left: calc(0px + (27 - 0) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Section_title___titleAndLogos {
+        font-size: 25.5px;
+        margin-bottom: 30px;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+}
+
+.Section_content___titleAndLogos {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+}
+
+@media only screen and (min-width: 600px) and (max-width: 900px) {
+    .Section_content___titleAndLogos {
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+.CompanyLogo {
+    width: 100%;
+}

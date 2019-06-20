@@ -1,12 +1,11 @@
 import React from 'react';
 import './styles.css';
 
-import Image from 'gatsby-image';
 import Pill from '../Pill';
 
 const Header = ({ header }) => {
 
-    const {title, subtitle, pill, image} = header;
+    const {title, subtitle, pill, image, alt} = header;
 
     const jsx = (
         <div
@@ -34,6 +33,7 @@ const Header = ({ header }) => {
 
                 {pill && 
                 <Pill
+                from='header'
                 pill={pill}
                 ></Pill>}
             </div>
@@ -42,9 +42,11 @@ const Header = ({ header }) => {
             className='Header_box Header_box___image'
             >
                 {image && 
-                <Image
-                fluid={image.fluid}
-                ></Image>}
+                <img
+                className='Header_image'
+                src={`https:${image.file.url}`}
+                alt={alt}
+                ></img>}
 
             </div>
         </div>

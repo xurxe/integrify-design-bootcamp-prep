@@ -2,10 +2,9 @@
     background-color: var(--blue);
     display: grid;
     grid-template-columns: 2fr 1fr;
-    min-height: 100vh;
+    height: 100vh;
     width: 100%;
     padding-top: 120px;
-    padding-bottom: 60px;
     padding-right: 60px;
     padding-left: 60px;
 }
@@ -28,10 +27,6 @@
         padding-right: 20px;
         padding-left: 20px;
     }
-}
-
-.Header_box___text {
-    align-self: center;
 }
 
 .Header_title {
@@ -78,4 +73,22 @@
         font-size: 25.5px;
     }
 }
- 
+
+.Header_box___image {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.Header_image {
+    display: block;
+    width: 100%;
+}
+
+@media only screen and (max-width: 700px) {
+    .Header_image {
+        height: 100%;
+        width: auto;
+        align-self: flex-end;
+    }
+}
