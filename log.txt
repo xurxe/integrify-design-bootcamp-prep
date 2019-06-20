@@ -77,3 +77,6 @@
             },
         },
         'gatsby-transformer-remark',
+
+18. Added packages:
+    - react-resize-detector

@@ -20,6 +20,7 @@ const TitleAndLogos = ({ section }) => {
 
                 {logos.map(logo =>                         
                     <img
+                    key={logo.id}
                     className='CompanyLogo'
                     src={`https:${logo.logo.file.url}`}
                     alt='Map'

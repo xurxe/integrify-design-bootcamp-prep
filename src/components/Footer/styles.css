@@ -28,6 +28,9 @@
 }
 
 .Footer_subBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     padding: 0 60px;
 }
 
@@ -39,6 +42,12 @@
 
 .Footer_subBox___socialMedia {
     border-right: 1px solid var(--cyan);
+}
+
+@media only screen and (max-width: 800px) {
+    .Footer_subBox___socialMedia {
+        border-right: none;
+    }
 }
 
 .Footer_socialMediaTitle {

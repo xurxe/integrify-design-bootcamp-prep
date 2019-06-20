@@ -1,59 +1,152 @@
 import React from 'react';
 import './styles.css';
 
+import { Component } from 'react';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import Img from 'gatsby-image';
+import ReactResizeDetector from 'react-resize-detector';
 
-const Nav = ({ data }) => {
+class Nav extends Component {
 
-    const { contentfulNavigationBar } = data;
-    const { logoLeft, linksCenter, linkRight } = contentfulNavigationBar;
+    state = {
+        desktop: true,
+        closed: true,
+        classNameNav: 'Nav Nav___desktop',
+        classNameCenter: 'Nav_center Nav_center___desktop',
+    };
 
-    const jsx = (
-        <nav 
-        className='Nav'
-        >
-            <div 
-            className='Nav_box'
+    renderDesktop = () => {
+        this.setState(() => ({
+            desktop: true,
+            closed: true,
+            classNameNav: 'Nav Nav___desktop',
+            classNameCenter: 'Nav_center Nav_center___desktop',
+        }));
+    };
+
+    renderClosed = () => {
+        this.setState(() => ({
+            desktop: false,
+            closed: true,
+            classNameNav: 'Nav Nav___closed',
+            classNameCenter: 'Nav_center Nav_center___closed',
+        }));
+    };
+
+    renderOpen = () => {
+        this.setState(() => ({
+            desktop: false,
+            closed: false,
+            classNameNav: 'Nav Nav___open',
+            classNameCenter: 'Nav_center Nav_center___open',
+        }));
+    };
+
+    componentDidMount = () => {
+        if (window.matchMedia('(max-width: 600px)').matches) {
+            this.renderClosed();
+        }
+
+        else {
+            this.renderDesktop();
+        }
+    };
+
+    handleWindowResize = () => {
+
+        if (
+            this.state.desktop
+            && window.matchMedia('(max-width: 600px)').matches
+        ) {
+            this.renderClosed();
+        }
+
+        else if (
+            !this.state.desktop 
+            && !window.matchMedia('(max-width: 600px)').matches
+        ) {
+            this.renderDesktop();
+        }
+    };
+
+    handleClick = () => {
+
+        if (
+            !this.state.desktop 
+            && this.state.closed
+        ) {
+            this.renderOpen();
+        }
+
+        if (
+            !this.state.desktop 
+            && !this.state.closed
+        ) {
+            this.renderClosed();
+        };
+    };
+
+    render() {
+        const { contentfulNavigationBar } = this.props.data;
+        const { logoLeft, linksCenter, linkRight } = contentfulNavigationBar;
+
+        const jsx = (
+
+            <ReactResizeDetector
+            handleWidth
+            onResize={this.handleWindowResize}
+            refreshMode='throttle'
+            refreshRate={100}
             >
-                <button 
-                className='Nav_button hvr-outline-out___nav'
+
+                <nav 
+                className={this.state.classNameNav}
                 >
-                    <Img
-                    fluid={logoLeft.fluid}
-                    ></Img>
-
-                </button>
-            </div>
-
-            <div 
-            className='Nav_box'
-            >
-                {linksCenter.map(link => (
-                    <Link 
-                    key={link.id}
-                    className='Nav_link hvr-underline-out___nav' 
-                    to={link.slug ? `/${link.slug}` : '/'}
+                    <div 
+                    className='Nav_box'
                     >
-                        {link.name}
-                    </Link>
-                ))}
-            </div>
-    
-            <div 
-            className='Nav_box'
-            >
-                <Link  
-                className='Nav_link Nav_link___right hvr-underline-out___nav' 
-                to={`/${linkRight.slug}`}
-                >
-                    {linkRight.name}
-                </Link>
-            </div>
-        </nav>
-    )
+                        <button 
+                        className='Nav_button hvr-outline-out___nav'
+                        onClick={this.handleClick}
+                        >
+                            <Img
+                            fluid={logoLeft.fluid}
+                            ></Img>
 
-    return jsx;
+                        </button>
+                    </div>
+
+                    <div 
+                    className={`Nav_box ${this.state.classNameCenter}`}
+                    >
+                        {linksCenter.map(link => (
+                            <Link 
+                            key={link.id}
+                            className='Nav_link hvr-underline-out___nav' 
+                            to={link.slug ? `/${link.slug}` : '/'}
+                            >
+                                {link.name}
+                            </Link>
+                        ))}
+                    </div>
+            
+                    <div 
+                    className='Nav_box'
+                    >
+                        <Link  
+                        className='Nav_link Nav_link___right hvr-underline-out___nav' 
+                        to={`/${linkRight.slug}`}
+                        >
+                            {linkRight.name}
+                        </Link>
+                    </div>
+                </nav>
+            </ReactResizeDetector>
+        )
+
+        return jsx;
+    }
+    
 }
 
 export default props => (

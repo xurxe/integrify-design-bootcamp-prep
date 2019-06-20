@@ -2,7 +2,7 @@
     background-color: white;
     border-bottom: 10px solid var(--cyan);
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-between;
     padding: 15px;
     position: fixed;
@@ -11,8 +11,21 @@
     z-index: 10;
 }
 
+.Nav___open {
+    height: 100vh;
+}
+
 .Nav_box {
     display: flex;
+}
+
+.Nav_center___closed {
+    display: none;
+}
+
+.Nav_center___open {
+    display: flex;
+    flex-direction: column;
 }
 
 .Nav_button {
@@ -37,6 +50,7 @@
 
 .Nav_link___right {
     font-size: 16px;
+    line-height: 20px;
 }
 
 

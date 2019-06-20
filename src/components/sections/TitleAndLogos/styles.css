@@ -28,9 +28,10 @@
 .Section_content___titleAndLogos {
     display: grid;
     grid-template-columns: repeat(6, auto);
+    align-items: center;
 }
 
-@media only screen and (min-width: 600px) and (max-width: 900px) {
+@media only screen and (max-width: 900px) {
     .Section_content___titleAndLogos {
         grid-template-columns: repeat(3, auto);
     }

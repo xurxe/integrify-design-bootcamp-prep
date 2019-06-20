@@ -62,7 +62,7 @@ const EventSearch = () => {
                 type='submit'
                 className='Event_searchButton hvr-hollow___searchButton'
                 >
-                    <i class="fas fa-search"></i>
+                    <i className="fas fa-search"></i>
                 </button>
             </fieldset> 
         </form>
