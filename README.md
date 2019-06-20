@@ -4,8 +4,8 @@ We are two junior web developers in training at Integrify (Helsinki, Finland); A
 
 ## Demo
 
-[Master branch](https://integrify-design-bootcamp-prep-master.netlify.com/)
-[Develop branch](https://integrify-design-bootcamp-prep-develop.netlify.com/)
+- [Master branch](https://integrify-design-bootcamp-prep-master.netlify.com/)
+- [Develop branch](https://integrify-design-bootcamp-prep-develop.netlify.com/)
 
 ## Authors
 
