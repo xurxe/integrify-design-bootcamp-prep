@@ -2,8 +2,8 @@
     --blue: #2B2570;
     --cyan: #1DFFC2;
     --grey: #e4e4e4;
-    --phi: 1.618; // the golden ratio
-    --phiRoot: 1.272; // the square root of the golden ratio
+    --phi: 1.618; /* the golden ratio */
+    --phiRoot: 1.272; /* the square root of the golden ratio */
     color: var(--blue);
     font-size: 20px;
 }
@@ -18,4 +18,8 @@
 
 strong {
     font-weight: bold;
+}
+
+em {
+    font-style: italic;
 }

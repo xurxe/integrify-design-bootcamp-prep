@@ -4,15 +4,29 @@
     grid-template-columns: 2fr 1fr;
     height: 100vh;
     width: 100%;
-    padding-top: 120px;
+    overflow: hidden;
+    padding-top: 6rem;
+    /* MAX */
     padding-right: 60px;
     padding-left: 60px;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
+    /* LOWER = min-width, UPPER = max-width */
+    /* MINpx + (MAX - MIN) * (100vw - LOWERpx) / (UPPER - LOWER) */
+    /* change calc formulas manually if any parameters change */
+
     .Header {
-        padding-right: calc(20px + (60 - 20) * (100vw - 600px) / (900 - 600));
+        padding-right: calc(20px + (60 - 20) * (100vw - 600px) / (900 - 600)); 
         padding-left: calc(20px + (60 - 20) * (100vw - 600px) / (900 - 600));
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .Header {
+        /* MIN */
+        padding-right: 20px;
+        padding-left: 20px;
     }
 }
 
@@ -22,21 +36,20 @@
     }
 }
 
-@media only screen and (max-width: 600px) {
-    .Header {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-}
-
 .Header_title {
     color: var(--cyan);
     font-family: 'Baumans', monospace;
-    font-size: 7vw;
     font-weight: normal;
+    /* MAX */
+    /* 7vw at 900 px -> 900 * 0.07 = 63px */
+    font-size: 7vw;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
+    /* LOWER = min-width, UPPER = max-width */
+    /* MINpx + (MAX - MIN) * (100vw - LOWERpx) / (UPPER - LOWER) */
+    /* change calc formulas manually if any parameters change */
+
     .Header_title {
         font-size: calc(41px + (63 - 41) * (100vw - 600px) / (900 - 600));
     }
@@ -44,8 +57,9 @@
 
 @media only screen and (max-width: 600px) {
     .Header_title {
+        /* MIN */
         font-size: 41px;
-        margin-bottom: 20px;
+        margin-bottom: 1rem;
     }
 }
 
@@ -57,12 +71,18 @@
     -moz-osx-font-smoothing: grayscale;
     -o-font-smoothing: antialiased;
     font-family: 'Baumans', monospace;
-    font-size: 4.5vw;
     font-weight: normal;
     margin-bottom: 40px;
+    /* MAX */
+    /* 4.5vw at 900 px -> 900 * 0.045 = 40.5px */
+    font-size: 4.5vw;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
+    /* LOWER = min-width, UPPER = max-width */
+    /* MINpx + (MAX - MIN) * (100vw - LOWERpx) / (UPPER - LOWER) */
+    /* change calc formulas manually if any parameters change */
+
     .Header_subtitle {
         font-size: calc(25px + (40.5 - 25) * (100vw - 600px) / (900 - 600));
     }
@@ -70,7 +90,8 @@
 
 @media only screen and (max-width: 600px) {
     .Header_subtitle {
-        font-size: 25.5px;
+        /* MIN */
+        font-size: 25px;
     }
 }
 
