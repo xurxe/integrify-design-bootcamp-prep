@@ -8,7 +8,7 @@ const Header = ({ header }) => {
     const {title, subtitle, pill, image, alt} = header;
 
     const jsx = (
-        <div
+        <header
         className='Header'
         >
 
@@ -40,16 +40,16 @@ const Header = ({ header }) => {
 
             <div
             className='Header_box Header_box___image'
-            >
+            > 
                 {image && 
                 <img
                 className='Header_image'
                 src={`https:${image.file.url}`}
                 alt={alt}
-                ></img>}
+                ></img>} 
 
             </div>
-        </div>
+        </header>
 
     )
 

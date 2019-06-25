@@ -80,3 +80,8 @@
 
 18. Added packages:
     - react-resize-detector
+
+19. Added packages:
+    - gatsby-plugin-react-svg@next
+    - react-inlinesvg
+    --> didn't work

@@ -1,36 +1,36 @@
 .Section___members {
-    margin-right: 20px;
-    margin-left: 20px;
+    margin-right: 0;
+    margin-left: 0;
 }
 
 .Section_content___members {
     display: flex;
     overflow: hidden;
-    margin-top: 60px;
-    margin-bottom: 60px;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
 }
 
 .Member {
     background: var(--blue);
     border-left: 5px solid var(--cyan);
     color: white;
-    height: 404px;
     width: 250px;
+    height: 404px; /* approximately the width times the golden ratio */
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -o-font-smoothing: antialiased;
     flex-shrink: 0;
-    margin-left: 10px;
+    margin-left: 0.5rem;
 }
 
 .Member_photo {
-    height: 318px;
+    height: 318px; /* the width times the square root of the golden ratio */
 }
 
 .Member_text {
-    padding: 20px 10px;
+    padding: 1rem 0.5rem;
     text-align: center;
 }
 
@@ -40,7 +40,7 @@
 }
 
 .Member_job {
-    font-size: 16px;
+    font-size: 16px; /* approximately 1rem divided by the square root of the golden ratio */
 }
 
 .Member_company {

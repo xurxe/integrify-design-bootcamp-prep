@@ -10,8 +10,7 @@ module.exports = {
         `gatsby-plugin-react-helmet`,
         `gatsby-transformer-sharp`,
         `gatsby-plugin-sharp`,
-        `gatsby-plugin-manifest`,
-        'gatsby-transformer-remark',
+        `gatsby-transformer-remark`,
         {
             resolve: `gatsby-source-contentful`,
             options: {

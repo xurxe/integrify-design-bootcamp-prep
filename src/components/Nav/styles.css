@@ -1,10 +1,10 @@
 .Nav {
     background-color: white;
-    border-bottom: 10px solid var(--cyan);
+    border-bottom: 0.5rem solid var(--cyan);
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding: 15px;
+    padding: 0.75rem;
     position: fixed;
     top: 0;
     width: 100%;
@@ -32,8 +32,8 @@
     background-color: var(--blue);
     border: none;
     cursor: pointer;
-    height: 40px;
-    width: 40px;
+    height: 2rem;
+    width: 2rem;
     outline: none;
 }
 
@@ -43,14 +43,14 @@
 
 .Nav_link {
     color: var(--blue);
-    font-size: 20px;
-    margin: 10px;
+    font-size: 1rem;
+    margin: 0.5rem;
     text-decoration: none;
 }
 
 .Nav_link___right {
-    font-size: 16px;
-    line-height: 20px;
+    font-size: 16px; /* approximately 1rem divided by the square root of the golden ratio */
+    line-height: 1rem;
 }
 
 

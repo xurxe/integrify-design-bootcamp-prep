@@ -7,14 +7,22 @@ We are two junior web developers in training at Integrify (Helsinki, Finland); A
 - [Master branch](https://integrify-design-bootcamp-prep-master.netlify.com/)
 - [Develop branch](https://integrify-design-bootcamp-prep-develop.netlify.com/)
 
+## Technologies and tools
+
+- React
+- Gatsby
+- Contentful
+- GraphQL
+- Netlify
+
 ## Authors
 
-- André Vollrath
-- Xurxe Toivo García
+- André Vollrath (designer)
+- Xurxe Toivo García (developer)
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 

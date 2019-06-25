@@ -2,7 +2,7 @@
     background-color: var(--cyan);
     color: var(--blue);
     display: inline-block;
-    font-size: 16px;
+    font-size: 16px; /* approximately 1rem divided by the square root of the golden ratio */
     height: 2em;
     line-height: 2em;
     border-radius: 1em;
@@ -11,10 +11,16 @@
 }
 
 .Pill___header {
+    /* MAX */
+    /* 3vw at 900px -> 900 * 0.03 = 27px */
     font-size: 3vw;
 }
 
 @media only screen and (min-width: 600px) and (max-width: 900px) {
+    /* LOWER = min-width, UPPER = max-width */
+    /* MINpx + (MAX - MIN) * (100vw - LOWERpx) / (UPPER - LOWER) */
+    /* change calc formulas manually if any parameters change */
+
     .Pill___header {
         font-size: calc(16px + (27 - 16) * (100vw - 600px) / (900 - 600));
     }
@@ -22,6 +28,7 @@
 
 @media only screen and (max-width: 600px) {
     .Pill___header {
+        /* MIN */
         font-size: 16px;
     }
 }

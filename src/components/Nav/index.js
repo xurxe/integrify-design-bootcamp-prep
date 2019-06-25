@@ -110,7 +110,7 @@ class Nav extends Component {
                         onClick={this.handleClick}
                         >
                             <Img
-                            fluid={logoLeft.fluid}
+                            fixed={logoLeft.fixed}
                             ></Img>
 
                         </button>
@@ -160,14 +160,14 @@ export const query = graphql`
 {
     contentfulNavigationBar {
         logoLeft {
-            fluid {
-                base64
+            fixed (width: 40){
                 aspectRatio
+                width
+                height
                 src
                 srcSet
                 srcWebp
                 srcSetWebp
-                sizes
             }
         }
         linksCenter {
