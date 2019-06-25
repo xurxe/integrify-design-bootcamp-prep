@@ -35,12 +35,8 @@ export const query = graphql`
             }
         }
         headerImage {
-            id
-            id
             file {
                 url
-                fileName
-                contentType
             }
             fluid {
                 base64

@@ -10,7 +10,7 @@ const Main = ({ main }) => {
     
     const jsx = (
         <main
-        className='main'
+        className='Main'
         >
             {main.map(section => (
                 <Section 

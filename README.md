@@ -1,20 +1,27 @@
 # Integrify Design Bootcamp
 
-We are two junior web developers in training at Integrify (Helsinki, Finland); André is also a professional designer, and Xurxe has dabbled in all kinds of visual arts. Our teacher asked us to create and implement a design bootcamp for our classmates. The bootcamp took place on June 26th-28th 2019.
+Description.
 
 ## Demo
 
 Coming soon.
 
+## Technologies and tools
+
+- React
+- Gatsby
+- Contentful
+- GraphQL
+- Netlify
+
 ## Authors
 
-- André Vollrath
 - Xurxe Toivo García
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgments
 
-Everyone at [Integrify](https://github.com/Integrify-Finland), especially our teacher and classmates.
+Coming soon.

@@ -108,15 +108,12 @@ export const query = graphql`
         }
         mapTitle {
             childMarkdownRemark {
-                id
                 html
             }
         }
         mapImage {
             file {
                 url
-                fileName
-                contentType
             }
             fluid {
                 base64

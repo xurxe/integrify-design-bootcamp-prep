@@ -1,6 +1,8 @@
-.main {
+.Main {
+    background: white;
     margin-right: 1rem;
     margin-left: 1rem;
+    z-index: 10;
 }
 
 .Section {
