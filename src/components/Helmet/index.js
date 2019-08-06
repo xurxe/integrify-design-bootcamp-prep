@@ -4,6 +4,7 @@ import Helmet from 'react-helmet';
 const HelmetComponent = ({ contentfulSeo }) => {
 
     const { title, description, image, url, keywords, author } = contentfulSeo;
+    
     const jsx = (
         <Helmet>
 

@@ -11,6 +11,7 @@ const Members = ({ section }) => {
     const jsx = (
         <section
         className='Section Section___members'>
+            
             <h2
             className='Section_title'
             >

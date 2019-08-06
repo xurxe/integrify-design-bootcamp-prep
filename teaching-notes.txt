@@ -1,0 +1,17 @@
+1. Go to https://www.gatsbyjs.org/ > Docs > Quick Start
+
+2. Follow instructions to install Gatsby CLI
+    [currently on /Integrify/integrify-design-bootcamp-prep]
+    > cd ..
+    > npm install -g gatsby-cli
+
+3. Go to https://www.gatsbyjs.org/ > Docs > Starter Library
+
+4. Go to gatsby-starter-default > Source
+
+5. Follow instructions to use this starter
+    > gatsby new integrify-design-bootcamp https://github.com/gatsbyjs/gatsby-starter-default
+    > cd integrify-design-bootcamp
+    > gatsby develop
+
+6. Install 
